@@ -19,6 +19,7 @@ int main() {
 	cout << "The max of 9, 15, and 17 is " << max(9, 15, 17) << endl;
 
 	int arrayOne[ARRAY_LENGTH] = { 10,2,30,4,15 };
+
 	cout << "The max of the array {10, 2, 30, 4, 15} is " << max(arrayOne) << endl;
 
 	int arrayTwo[ARRAY_LENGTH] = { 8,70,16,15,14 };
@@ -67,9 +68,9 @@ int main() {
 
 	cout << "The product of 0.5 * 4.5  is " << multiply(0.5, 4.5) << endl;
 
-	// b.Can you add another third function that has the same name and has two arguments : multiply(int, int)
-	// and call it as follows multiply(2, 3) ? Why or why not? Add your answer as a comment in your code. (1 pt.).
-	// .......
-	// .......
+	 b.Can you add another third function that has the same name and has two arguments : multiply(int, int)
+	 and call it as follows multiply(2, 3) ? Why or why not? Add your answer as a comment in your code. (1 pt.).
+	 .......
+	 .......
 	return 0;
 }

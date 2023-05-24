@@ -39,10 +39,8 @@ int max(int num1, int num2, int num3) {
 int max(int array[]) {
 	int Arrmax = 0;
 
-	int size = sizeof(array) / sizeof(int);
-
-	for (int count = 0; count < size; count++) {
-		if (array[count] < Arrmax) {
+	for (int count = 0; count < ARRAY_LENGTH; count++) {
+		if (array[count] > Arrmax) {
 			Arrmax = array[count];
 		}
 	}
@@ -53,24 +51,13 @@ int max(int array[]) {
 int max(int array1[], int array2[]) {
 	//Declare variables for size and max
 	int DoubleArrmax = 0;
-	int size = 0;
-	int size1 = sizeof(array1) / sizeof(int);
-	int size2 = sizeof(array2) / sizeof(int);
-
-	//Find size variable magnitude
-	if (size1 < size2) {
-		size = size2;
-	}
-	else {
-		size = size1;
-	}
 
 	//Check both arrays for largest number
-	for (int count = 0; count < size; count++) {
-		if (array1[count] < DoubleArrmax) {
+	for (int count = 0; count < ARRAY_LENGTH; count++) {
+		if (array1[count] > DoubleArrmax) {
 			DoubleArrmax = array1[count];
 		}
-		if (array2[count] < DoubleArrmax) {
+		if (array2[count] > DoubleArrmax) {
 			DoubleArrmax = array2[count];
 		}
 	}
@@ -78,19 +65,29 @@ int max(int array1[], int array2[]) {
 	return DoubleArrmax;
 }
 
-void swap(Location* firstlocation, Location* secondlocation) {
-	Location* temp = firstlocation;//Initialize temporary location struct
+void swap(Location& firstlocation, Location& secondlocation) {
+	double Lattemp = firstlocation.latitude;//Initialize temporary location struct
+	double Longtemp = firstlocation.longitude;
 
-	//put first location into temporary storage.
-	temp->latitude = firstlocation->latitude;
-	temp->longitude = firstlocation->longitude;
+	//put second location in first location address.
+	firstlocation.latitude = secondlocation.latitude;
+	firstlocation.longitude = secondlocation.longitude;
+
+	//put temporary storage (first location) in second location address.
+	secondlocation.latitude = Lattemp;
+	secondlocation.longitude = Longtemp;
+}
+
+void swap(Location* firstlocation, Location* secondlocation) {
+	double Lattemp = firstlocation->latitude;//Initialize temporary location struct
+	double Longtemp = firstlocation->longitude;
 
 	//put second location in first location address.
 	firstlocation->latitude = secondlocation->latitude;
 	firstlocation->longitude = secondlocation->longitude;
 
 	//put temporary storage (first location) in second location address.
-	secondlocation->latitude = temp->latitude;
-	secondlocation->longitude = temp->longitude;
-
+	secondlocation->latitude = Lattemp;
+	secondlocation->longitude = Longtemp;
 }
+
