@@ -21,9 +21,15 @@
     <ClCompile Include="Functionality.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="swapandmultiply.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Functionality.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="swapandmultiply.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

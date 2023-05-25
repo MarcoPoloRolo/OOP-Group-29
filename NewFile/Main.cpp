@@ -2,6 +2,7 @@
 //---------
 //--------
 
+#include "swapandmultiply.h"
 #include "Functionality.h"
 #include <iostream>
 #define ARRAY_LENGTH 5
@@ -68,9 +69,12 @@ int main() {
 
 	cout << "The product of 0.5 * 4.5  is " << multiply(0.5, 4.5) << endl;
 
-	 b.Can you add another third function that has the same name and has two arguments : multiply(int, int)
-	 and call it as follows multiply(2, 3) ? Why or why not? Add your answer as a comment in your code. (1 pt.).
-	 .......
-	 .......
+	// b.Can you add another third function that has the same name and has two arguments : multiply(int, int)
+	//and call it as follows multiply(2, 3) ? Why or why not? Add your answer as a comment in your code. (1 pt.).
+	// (ANSWER)
+	// Yes we can have add another third function that same and has two arguements, in this case multiply(int,int) and when called
+	// it gives out the desired output based on the input. This is because of function overloading and it works under same name of the
+	// as long as it has different data type, different no of agrumements , the function should work properly , this enhances the redability of the code.
+	cout << "An Example of Function Overload is this : " << multiply(2, 3) << endl;
 	return 0;
 }
